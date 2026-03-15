@@ -9,7 +9,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState<PageId>("home");
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="min-h-screen bg-transparent text-slate-100">
       <Header currentPage={currentPage} onNavigate={setCurrentPage} />
 
       {currentPage === "home" && <HomePage />}
@@ -17,7 +17,7 @@ function App() {
       {currentPage === "practice-room" && <PracticeRoomPage />}
       {currentPage === "mentoring" && <MentoringPage />}
 
-      <footer className="border-t border-neutral-800 py-6 text-center text-sm text-neutral-500">
+      <footer className="border-t border-slate-700/80 py-6 text-center text-sm text-slate-500">
         © SUMMIT Web Page. All rights reserved.
       </footer>
     </div>

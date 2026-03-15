@@ -59,7 +59,7 @@ export function MentoringPage() {
           <h2 className="mb-8 text-2xl font-bold tracking-tight text-white">
             멘토링
           </h2>
-          <p className="mb-6 text-neutral-400">
+          <p className="mb-6 text-slate-400">
             세션을 선택하면 해당 멘토링 일정 등록 및 확인이 가능합니다.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -72,12 +72,12 @@ export function MentoringPage() {
                   setSelectedMentor(MENTORS_BY_SESSION[id][0] ?? "");
                   setSelectedDates([]);
                 }}
-                className="rounded-xl border border-neutral-700 bg-neutral-900/80 p-6 text-left transition hover:border-amber-500/50 hover:bg-neutral-800"
+                className="rounded-xl border border-slate-700 bg-slate-900/80 p-6 text-left transition hover:border-cyan-500/50 hover:bg-slate-800"
               >
                 <span className="text-lg font-semibold text-white">
                   {MENTORING_SESSION_LABELS[id]} 멘토링
                 </span>
-                <p className="mt-1 text-sm text-neutral-400">
+                <p className="mt-1 text-sm text-slate-400">
                   멘토 {MENTORS_BY_SESSION[id].length}명
                 </p>
               </button>
@@ -90,7 +90,7 @@ export function MentoringPage() {
             <button
               type="button"
               onClick={() => setSelectedSessionId(null)}
-              className="rounded-lg px-3 py-2 text-sm text-neutral-400 hover:bg-neutral-800 hover:text-white"
+              className="rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white"
             >
               ← 목록으로
             </button>
@@ -101,7 +101,7 @@ export function MentoringPage() {
 
           {/* 캘린더 UI */}
           <section className="mb-8">
-            <h3 className="mb-4 text-lg font-semibold text-amber-400">
+            <h3 className="mb-4 text-lg font-semibold text-cyan-400">
               멘토링 일정 선택
             </h3>
             <div className="max-w-md">
@@ -113,17 +113,17 @@ export function MentoringPage() {
           </section>
 
           {/* 멘토 선택 + 등록하기 */}
-          <section className="mb-8 rounded-xl border border-neutral-700 bg-neutral-900/80 p-4">
-            <h3 className="mb-4 text-lg font-semibold text-amber-400">
+          <section className="mb-8 rounded-xl border border-slate-700 bg-slate-900/80 p-4">
+            <h3 className="mb-4 text-lg font-semibold text-cyan-400">
               멘토 선택 및 등록
             </h3>
             <div className="flex flex-wrap items-end gap-4">
               <label className="flex flex-col gap-1">
-                <span className="text-xs text-neutral-400">멘토</span>
+                <span className="text-xs text-slate-400">멘토</span>
                 <select
                   value={selectedMentor}
                   onChange={(e) => setSelectedMentor(e.target.value)}
-                  className="rounded-lg border border-neutral-600 bg-neutral-800 px-3 py-2 text-white min-w-[140px]"
+                  className="rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-white min-w-[140px]"
                 >
                   {mentors.map((name) => (
                     <option key={name} value={name}>
@@ -133,10 +133,10 @@ export function MentoringPage() {
                 </select>
               </label>
               <div className="flex flex-col gap-1">
-                <span className="text-xs text-neutral-400">
+                <span className="text-xs text-slate-400">
                   선택한 날짜 ({selectedDates.length}일)
                 </span>
-                <p className="text-sm text-neutral-300">
+                <p className="text-sm text-slate-300">
                   {selectedDates.length > 0
                     ? selectedDates.join(", ")
                     : "캘린더에서 날짜를 클릭하세요."}
@@ -148,7 +148,7 @@ export function MentoringPage() {
                 disabled={
                   selectedDates.length === 0 || !selectedMentor
                 }
-                className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black hover:bg-amber-400 disabled:opacity-50 disabled:hover:bg-amber-500"
+                className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-cyan-400 disabled:opacity-50 disabled:hover:bg-cyan-500 shadow-lg shadow-cyan-500/20"
               >
                 등록하기
               </button>
@@ -157,8 +157,8 @@ export function MentoringPage() {
 
           {/* 등록된 일정 목록 */}
           {sessionSchedules.length > 0 && (
-            <section className="rounded-xl border border-neutral-700 bg-neutral-900/80 p-4">
-              <h4 className="mb-3 text-sm font-medium text-neutral-300">
+            <section className="rounded-xl border border-slate-700 bg-slate-900/80 p-4">
+              <h4 className="mb-3 text-sm font-medium text-slate-300">
                 등록된 멘토링 일정
               </h4>
               <ul className="space-y-2">
@@ -167,10 +167,10 @@ export function MentoringPage() {
                   .map((s) => (
                     <li
                       key={s.id}
-                      className="flex items-center gap-2 text-sm text-neutral-300"
+                      className="flex items-center gap-2 text-sm text-slate-300"
                     >
                       <span className="text-white">{s.date}</span>
-                      <span className="text-amber-400">{s.mentorName}</span>
+                      <span className="text-cyan-400">{s.mentorName}</span>
                     </li>
                   ))}
               </ul>

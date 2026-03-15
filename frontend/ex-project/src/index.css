@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
-/* SUMMIT 밴드 페이지 기본 스타일 (Tailwind 로드 전에도 보이도록) */
+/* 우주/몽환 테마: SUMMIT 밴드 페이지 기본 스타일 */
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0a0a0a;
-  color: #fafafa;
+  /* 진한 우주 그라데이션 (남색 → 보라 → 딥스페이스) */
+  background: linear-gradient(
+    135deg,
+    #0a0a1a 0%,
+    #0f0f2a 25%,
+    #12082a 50%,
+    #0d0a1a 75%,
+    #0a0a1a 100%
+  );
+  background-attachment: fixed;
+  color: #e2e8f0;
 }
 
 #root {

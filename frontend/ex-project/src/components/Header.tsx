@@ -25,7 +25,7 @@ const NAV_ITEMS: { id: PageId; label: string }[] = [
 
 export function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-slate-700/80 bg-slate-950/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <h1 className="text-xl font-bold tracking-tight text-white md:text-2xl">
           SUMMIT Web Page
@@ -38,8 +38,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate(id)}
               className={
                 currentPage === id
-                  ? "rounded-lg bg-amber-500 px-3 py-2 text-sm font-medium text-black transition"
-                  : "rounded-lg px-3 py-2 text-sm font-medium text-neutral-300 transition hover:bg-neutral-800 hover:text-white"
+                  ? "rounded-lg bg-cyan-500 px-3 py-2 text-sm font-medium text-slate-950 transition shadow-lg shadow-cyan-500/25"
+                  : "rounded-lg px-3 py-2 text-sm font-medium text-slate-400 transition hover:bg-slate-800 hover:text-white"
               }
             >
               {label}

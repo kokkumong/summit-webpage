@@ -59,12 +59,12 @@ export function MentoringCalendar({
   for (let d = 1; d <= daysInMonth; d++) cells.push(d);
 
   return (
-    <div className="rounded-xl border border-neutral-700 bg-neutral-900/80 p-4">
+    <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-4">
       <div className="mb-4 flex items-center justify-between">
         <button
           type="button"
           onClick={goPrev}
-          className="rounded-lg px-3 py-1 text-neutral-400 hover:bg-neutral-700 hover:text-white"
+          className="rounded-lg px-3 py-1 text-slate-400 hover:bg-slate-700 hover:text-white"
           aria-label="이전 달"
         >
           ←
@@ -75,7 +75,7 @@ export function MentoringCalendar({
         <button
           type="button"
           onClick={goNext}
-          className="rounded-lg px-3 py-1 text-neutral-400 hover:bg-neutral-700 hover:text-white"
+          className="rounded-lg px-3 py-1 text-slate-400 hover:bg-slate-700 hover:text-white"
           aria-label="다음 달"
         >
           →
@@ -85,7 +85,7 @@ export function MentoringCalendar({
         {WEEKDAYS.map((w) => (
           <div
             key={w}
-            className="py-1 font-medium text-neutral-400"
+            className="py-1 font-medium text-slate-400"
           >
             {w}
           </div>
@@ -101,8 +101,8 @@ export function MentoringCalendar({
               onClick={() => toggleDate(day)}
               className={
                 isSelected
-                  ? "rounded-lg bg-amber-500 py-2 text-black"
-                  : "rounded-lg py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  ? "rounded-lg bg-cyan-500 py-2 text-slate-950 font-medium shadow-md shadow-cyan-500/25"
+                  : "rounded-lg py-2 text-slate-300 hover:bg-slate-700 hover:text-white"
               }
             >
               {day}

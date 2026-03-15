@@ -16,11 +16,11 @@ function formatDisplayDate(dateStr: string): string {
 function ShowCard({ show }: { show: Show }) {
   return (
     <article
-      className="group relative overflow-hidden rounded-2xl border border-neutral-700/60 bg-neutral-900/80 p-6 shadow-xl backdrop-blur transition hover:border-amber-500/40 hover:shadow-amber-500/10"
+      className="group relative overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/80 p-6 shadow-xl backdrop-blur transition hover:border-cyan-500/40 hover:shadow-cyan-500/10"
       data-show-id={show.id}
     >
       {/* 날짜 뱃지 */}
-      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-400">
+      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-400">
         <span aria-hidden="true">📅</span>
         {formatDisplayDate(show.date)}
       </div>
@@ -29,19 +29,19 @@ function ShowCard({ show }: { show: Show }) {
         {show.title}
       </h3>
       {show.description && (
-        <p className="mb-4 text-sm text-neutral-400">{show.description}</p>
+        <p className="mb-4 text-sm text-slate-400">{show.description}</p>
       )}
 
-      <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-300">
+      <div className="flex flex-wrap items-center gap-3 text-sm text-slate-300">
         <span className="flex items-center gap-1.5">
-          <span className="text-amber-500">⏱</span>
+          <span className="text-cyan-500">⏱</span>
           {show.time}
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="text-amber-500">📍</span>
+          <span className="text-cyan-500">📍</span>
           <span>{show.venue.name}</span>
           {show.venue.city && (
-            <span className="text-neutral-500">· {show.venue.city}</span>
+            <span className="text-slate-500">· {show.venue.city}</span>
           )}
         </span>
       </div>
@@ -51,7 +51,7 @@ function ShowCard({ show }: { show: Show }) {
           href={show.ticketUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-amber-400"
+          className="mt-4 inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-cyan-400 shadow-lg shadow-cyan-500/20"
         >
           예매하기
           <span aria-hidden="true">→</span>
@@ -78,7 +78,7 @@ export function ScheduleSection({
         <h2 className="mb-8 text-center text-3xl font-bold tracking-tight text-white">
           {title}
         </h2>
-        <p className="text-center text-neutral-400">
+        <p className="text-center text-slate-400">
           예정된 공연이 없습니다. 곧 새로운 일정을 공유할 예정입니다.
         </p>
       </section>
@@ -92,7 +92,7 @@ export function ScheduleSection({
     >
       <h2
         id="schedule-heading"
-        className="mb-2 text-center text-sm font-medium uppercase tracking-widest text-amber-500"
+        className="mb-2 text-center text-sm font-medium uppercase tracking-widest text-cyan-500"
       >
         Live
       </h2>
