@@ -145,9 +145,7 @@ export function MentoringPage() {
               <button
                 type="button"
                 onClick={handleRegister}
-                disabled={
-                  selectedDates.length === 0 || !selectedMentor
-                }
+                disabled={selectedDates.length === 0 || !selectedMentor}
                 className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-cyan-400 disabled:opacity-50 disabled:hover:bg-cyan-500 shadow-lg shadow-cyan-500/20"
               >
                 등록하기
