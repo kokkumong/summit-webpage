@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header, type PageId } from "./components/Header";
 import { HomePage } from "./pages/HomePage";
 import { InstrumentRentalPage } from "./pages/InstrumentRentalPage";
+import { MentoringPage } from "./pages/MentoringPage";
 import { PracticeRoomPage } from "./pages/PracticeRoomPage";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       {currentPage === "home" && <HomePage />}
       {currentPage === "instrument-rental" && <InstrumentRentalPage />}
       {currentPage === "practice-room" && <PracticeRoomPage />}
+      {currentPage === "mentoring" && <MentoringPage />}
 
       <footer className="border-t border-neutral-800 py-6 text-center text-sm text-neutral-500">
         © SUMMIT Web Page. All rights reserved.

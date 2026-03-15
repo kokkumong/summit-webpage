@@ -32,7 +32,7 @@ export function InstrumentRentalPage() {
       kind: "electric-guitar",
       startDate: "2026-03-01",
       returnDate: "2026-03-15",
-      renterName: "김철수",
+      renterName: "서은영",
       available: false,
     },
     {
@@ -48,7 +48,7 @@ export function InstrumentRentalPage() {
       kind: "bass",
       startDate: "2026-03-10",
       returnDate: "2026-03-24",
-      renterName: "이영희",
+      renterName: "정규호",
       available: false,
     },
     {
@@ -70,7 +70,13 @@ export function InstrumentRentalPage() {
   ]);
 
   const [synthSlots, setSynthSlots] = useState<SynthTimeSlot[]>([
-    { id: "s1", date: "2026-03-16", startTime: "14:00", endTime: "15:30", userName: "박민수" },
+    {
+      id: "s1",
+      date: "2026-03-16",
+      startTime: "14:00",
+      endTime: "15:30",
+      userName: "한태영",
+    },
   ]);
 
   // 신디 예약 폼 상태
@@ -114,8 +120,12 @@ export function InstrumentRentalPage() {
             <thead>
               <tr className="border-b border-neutral-700 bg-neutral-800/80">
                 <th className="px-4 py-3 font-medium text-neutral-200">악기</th>
-                <th className="px-4 py-3 font-medium text-neutral-200">대여 기간</th>
-                <th className="px-4 py-3 font-medium text-neutral-200">반납 날짜</th>
+                <th className="px-4 py-3 font-medium text-neutral-200">
+                  대여 기간
+                </th>
+                <th className="px-4 py-3 font-medium text-neutral-200">
+                  반납 날짜
+                </th>
                 <th className="px-4 py-3 font-medium text-neutral-200">상태</th>
               </tr>
             </thead>
@@ -230,7 +240,9 @@ export function InstrumentRentalPage() {
                 className="flex flex-wrap items-center gap-2 text-sm text-neutral-300"
               >
                 <span className="text-white">{s.date}</span>
-                <span>{s.startTime} ~ {s.endTime}</span>
+                <span>
+                  {s.startTime} ~ {s.endTime}
+                </span>
                 <span className="text-amber-400">{s.userName}</span>
               </li>
             ))}

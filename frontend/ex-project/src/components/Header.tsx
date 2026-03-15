@@ -3,7 +3,11 @@
  * 기능별 네비게이션 링크를 포함합니다.
  */
 
-export type PageId = "home" | "instrument-rental" | "practice-room";
+export type PageId =
+  | "home"
+  | "instrument-rental"
+  | "practice-room"
+  | "mentoring";
 
 export interface HeaderProps {
   /** 현재 활성 페이지 */
@@ -16,6 +20,7 @@ const NAV_ITEMS: { id: PageId; label: string }[] = [
   { id: "home", label: "홈" },
   { id: "instrument-rental", label: "악기 대여 사업" },
   { id: "practice-room", label: "소모임실 예약" },
+  { id: "mentoring", label: "멘토링" },
 ];
 
 export function Header({ currentPage, onNavigate }: HeaderProps) {

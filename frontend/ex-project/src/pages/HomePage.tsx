@@ -25,7 +25,7 @@ export function HomePage() {
           SUMMIT
         </h2>
         <p className="mt-4 max-w-md text-lg text-neutral-300">
-          음악과 함께하는 SUMMIT 밴드의 공식 웹페이지입니다.
+          IT대 x AI대 연합 밴드 SUMMIT 공식 웹페이지입니다.
         </p>
       </div>
     </main>
